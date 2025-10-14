@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pwsh:*)",
+      "Bash(powershell.exe:*)",
+      "Read(//c/Users/Horiz/PycharmProjects/Hormax/specs/001-en-as-the/**)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
