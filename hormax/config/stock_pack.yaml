@@ -1,0 +1,18 @@
+data_source:
+  provider: "yfinance"  # or "alpha_vantage"
+  api_key: null         # Set via HORMAX_DATA_SOURCE_API_KEY env var
+  timeout: 30
+
+cache:
+  enabled: true
+  directory: ".cache/stock_data"
+  ttl_seconds: 3600     # 1 hour
+
+rate_limit:
+  requests_per_second: 5.0
+  max_retries: 3
+
+logging:
+  level: "INFO"         # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/stock_pack.log"
