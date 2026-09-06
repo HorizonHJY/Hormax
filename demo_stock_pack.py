@@ -6,17 +6,6 @@ to generate a stock data pack with sample tickers.
 
 from datetime import date
 from pathlib import Path
-import sys
-
-
-# Ensure the repository root is on ``sys.path`` when the script is executed
-# directly (``python hormax/demo_stock_pack.py``).  Without this, Python
-# resolves the ``hormax`` package to ``hormax/hormax`` which only contains
-# namespace stubs, leading to ``ModuleNotFoundError`` for the real
-# implementation that lives one directory higher.
-REPO_ROOT = Path(__file__).resolve().parents[1]
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
 
 from hormax.finance.stocks import build_stock_pack
 

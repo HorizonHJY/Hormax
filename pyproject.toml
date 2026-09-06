@@ -40,6 +40,15 @@ dev = [
     "mypy>=1.7.0",
 ]
 
+
+# 显式声明包发现范围。不能依赖 setuptools 的自动发现：仓库根还有
+# demo_stock_pack.py、config/、tests/、specs/ 等非包内容，flat-layout
+# 自动发现会把它们一起当成顶层包，直接构建失败。
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hormax*"]
+exclude = ["tests*", "specs*"]
+
 [tool.black]
 line-length = 100
 target-version = ['py311']
