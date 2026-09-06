@@ -27,6 +27,13 @@ dependencies = [
     "PyYAML>=6.0",
     "requests-cache>=1.1.0",
     "requests>=2.31.0",
+    # Newey-West (HAC) standard errors for factor-exposure regressions.
+    # Hand-rolling a HAC covariance estimator is exactly the kind of thing
+    # that is subtly wrong for years without anyone noticing.
+    "statsmodels>=0.14.0",
+    # Parquet cache for the Ken French factor files (updated monthly, so
+    # refetching on every call is pure waste).
+    "pyarrow>=15.0.0",
 ]
 
 [project.optional-dependencies]
