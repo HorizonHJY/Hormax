@@ -31,6 +31,8 @@ dependencies = [
     # Hand-rolling a HAC covariance estimator is exactly the kind of thing
     # that is subtly wrong for years without anyone noticing.
     "statsmodels>=0.14.0",
+    # 分布分位数、卡方检验、峰度/偏度。VaR 与 Kupiec 检验都要用。
+    "scipy>=1.11.0",
     # Parquet cache for the Ken French factor files (updated monthly, so
     # refetching on every call is pure waste).
     "pyarrow>=15.0.0",
